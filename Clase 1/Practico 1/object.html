@@ -1,0 +1,65 @@
+<!--OBJECT-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let prestamo ={
+    capitalInicial : 1000,
+    interes: 45
+};
+prestamo.tipoInteres="Francés";
+prestamo['meses'] =24;
+console.log('Valor del prestamo',prestamo);
+const magia = function(){
+    return "res";
+};
+console.log(prestamo["inte" + magia()]);
+let capitalInicial = 1000;
+      let interes = 42;
+      let tipoInteres = 'Alemán';
+      let prestamoNuevo = {capitalInicial, interes, tipoInteres};
+      console.log('Valor de prestamoNuevo' ,prestamoNuevo);
+      console.log(prestamoNuevo["inte" + magia()]);
+      const arreglo = ['Esteban',35,'Zapatillas'];
+      for (var i = 0; i < arreglo.length; i++) {
+        console.log(i, ' :: ', arreglo[i]);
+      }
+      /*arreglo.forEach( function( el, i) {
+        console.log(i, ' :: ', el);
+      });*/
+      arreglo.forEach( ( el, i) => {
+        console.log(i, ' :: ', el);
+      });
+      // ES5
+      const keys = Object.keys(prestamoNuevo);
+      for (var i = 0; i < keys.length; i++) {
+        const k =keys[i];
+        console.log('ES5 :: ',k, ' :: ', prestamoNuevo[k]);
+      };
+      //ES6
+      for (var k in prestamoNuevo) {
+        console.log('ES6 :: ',k, ' :: ', prestamoNuevo[k]);
+      }
+      //ES6
+      const numeros = [1,2,6,21];
+      const numerosPares = numeros.filter( (nro) => {
+          const esPar = (nro % 2 == 0);
+          return esPar;
+      });
+      //const numerosPares = numeros.filter( (nro) =>  (nro % 2 == 0) );
+      console.log('numeros', numeros,  'numerosPares', numerosPares);
+      //ES5
+      let numerosParesES5 = [];
+      for (var i = 0; i < numeros.length; i++) {
+        if(numeros[i] % 2 == 0)
+          numerosParesES5.push(numeros[i]);
+      }
+      console.log('numeros', numeros,  'numerosParesES5', numerosParesES5);
+    </script>
+</body>
+</html>

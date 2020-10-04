@@ -1,0 +1,30 @@
+<!--FUNCIONES-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    const expo = (numero,exp)=>{
+        if(exp==0)return 1;
+        let acum = numero;
+        for(let i=1; i<exp;i++){
+            acum*=numero;
+        }
+        return acum;
+    };
+    console.log('2 al cuadrado (2^2) es: ', expo(2,2));
+    console.log('2 al cubo (2^3) es: ', expo(2,3));
+    const suma = (n1, n2)=>n1 +n2;
+    console.log('2+80 es: ', suma(2,80));
+    const arreglo = [2,7];
+    arreglo.forEach((item, i)=>{
+        console.log(item);
+    });
+    </script>
+</body>
+</html>
